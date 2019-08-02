@@ -174,12 +174,12 @@
 
 - (AKFAccountKit*) getAccountKit
 {
-    if (_accountKit == nil) {
+//     if (_accountKit == nil) {
         // may also specify AKFResponseTypeAccessToken
         BOOL useAccessToken = [[self.options valueForKey:@"responseType"] isEqualToString:@"token"];
         AKFResponseType responseType = useAccessToken ? AKFResponseTypeAccessToken : AKFResponseTypeAuthorizationCode;
         _accountKit = [[AKFAccountKit alloc] initWithResponseType:responseType];
-    }
+//     }
 
     return _accountKit;
 }
